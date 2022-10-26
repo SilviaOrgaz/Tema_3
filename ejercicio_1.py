@@ -7,4 +7,6 @@ def hanoi(n):
     return contador
 
 def imprimir():
-    n 
+    n = input("Introduce el número de discos de la Torre Hanói: ")
+    print("{} discos se tienen que mover {} veces.".format(n, hanoi(n)))
+
