@@ -11,7 +11,7 @@ class Nave ():
 
 def imprimir_lista(lista):
     for i in lista:
-        print i
+        print (i)
 
 lista = []
 A = Nave("Halcón Milenario", 100, 3, 5)
