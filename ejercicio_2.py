@@ -33,7 +33,9 @@ def determinante_grado_3_sarrus(m3):
     A2 = m3[0][2] * m3[1][1] * m3[2][0] + m3[1][2] * m3[2][1] * m3[0][0] + m3[0][1] * m3[1][0] * m3[2][2]
     return A1 - A2
 
+#He printado la matriz
 def dibujar_matriz(m3):
+    print("La matriz es:")
     for i in range(len(m3)):
         print(m3[i])
 
