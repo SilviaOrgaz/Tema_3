@@ -56,4 +56,8 @@ lista_largo = sorted(lista, key = lambda x:x.largo, reverse = True)
 
 #Las cinco naves con mayor cantidad de pasajeros
 lista_pasajeros = sorted(lista, key = lambda x:x.pasajeros, reverse = True)
-imprimir_n_elemntos(lista_pasajeros, 5)
+#imprimir_n_elemntos(lista_pasajeros, 5)
+
+#Nave que requiere mayor cantidad de tripulación
+lista_tripulacion = sorted(lista, key = lambda x:x.tripulacion, reverse = True)
+imprimir_n_elemntos(lista_tripulacion, 1)
