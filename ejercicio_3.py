@@ -26,6 +26,12 @@ def imprimir_n_elemntos(lista, longitud):
     for i in range(longitud):
         print(lista[i])
 
+#Imprime las naves con n o más pasajeros
+def imprimir_n_pasajeros(lista, n):
+    for i in lista:
+        if i.pasajeros >= n:
+            print (i)
+
 lista = []
 A = Nave("Halcón Milenario", 100, 3, 5)
 lista.append(A)
@@ -60,4 +66,7 @@ lista_pasajeros = sorted(lista, key = lambda x:x.pasajeros, reverse = True)
 
 #Nave que requiere mayor cantidad de tripulación
 lista_tripulacion = sorted(lista, key = lambda x:x.tripulacion, reverse = True)
-imprimir_n_elemntos(lista_tripulacion, 1)
+#imprimir_n_elemntos(lista_tripulacion, 1)
+
+#Naves que puede llevar 6 o más pasajeros
+imprimir_n_pasajeros(lista, 6)
