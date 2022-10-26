@@ -7,9 +7,12 @@ class Nave ():
         self.pasajeros = pasajeros
     
     def __str__(self):
-        return "{} de {} de largo con {} de tripulacion y con capacidad para {} pasajeros".format(self.nombre, self.largo, self.tripulacion, self.pasajeros)
+        return "{}: {}, {}, {}".format(self.nombre, self.largo, self.tripulacion, self.pasajeros)
+
+
 
 def imprimir_lista(lista):
+    print("Nombre, largo, tripulación, pasajeros")
     for i in lista:
         print (i)
 
@@ -29,5 +32,6 @@ lista.append(G)
 H = Nave("Veloz", 10, 1, 2)
 lista.append(H)
 
-
-imprimir_lista(lista)
+#Listado ordenado por nombre de las naves de manera ascendente
+lista_nombre = sorted(lista, key = lambda x:x.nombre)
+imprimir_lista(lista_nombre)
