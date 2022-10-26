@@ -33,10 +33,10 @@ def imprimir_n_pasajeros(lista, n):
             print (i)
 
 #Naves que comiencen por n
-def imprimir_n_naves(lista, n1, n2):
+def imprimir_n_naves(lista, n):
     contador = 0
     for i in lista:
-        if i.nombre[0] == n1 and i.nomre[1] == n2:
+        if i.nombre[0] == n[0] and i.nombre[1] == n[1]:
             print(i)
             contador+=1
     if contador == 0:
@@ -61,30 +61,30 @@ lista.append(H)
 
 #Listado ordenado por nombre de las naves de manera ascendente
 lista_nombre = sorted(lista, key = lambda x:x.nombre)
-#imprimir_lista(lista_nombre)
+imprimir_lista(lista_nombre)
 
 #Listado ordenado por largo de las naves de manera descendente
 lista_largo = sorted(lista, key = lambda x:x.largo, reverse = True)
-#imprimir_lista(lista_largo)
+imprimir_lista(lista_largo)
 
 #Muestra toda la información del Halcón Milenario y de la Estrella de la Muerte
-#imprimir(lista, "Halcón Milenario")
-#imprimir(lista, "Estrella de la Muerte")
+imprimir(lista, "Halcón Milenario")
+imprimir(lista, "Estrella de la Muerte")
 
 #Las cinco naves con mayor cantidad de pasajeros
 lista_pasajeros = sorted(lista, key = lambda x:x.pasajeros, reverse = True)
-#imprimir_n_elemntos(lista_pasajeros, 5)
+imprimir_n_elemntos(lista_pasajeros, 5)
 
 #Nave que requiere mayor cantidad de tripulación
 lista_tripulacion = sorted(lista, key = lambda x:x.tripulacion, reverse = True)
-#imprimir_n_elemntos(lista_tripulacion, 1)
+imprimir_n_elemntos(lista_tripulacion, 1)
 
 #Naves que puede llevar 6 o más pasajeros
-#imprimir_n_pasajeros(lista, 6)
+imprimir_n_pasajeros(lista, 6)
 
 #Nave más pequeña y más grandes
 print(lista_largo[0])
 print(lista_largo[-1])
 
 #Naves que comienzan por AT
-imprimir_n_naves(lista, "A", "T")
+imprimir_n_naves(lista, "AT")
