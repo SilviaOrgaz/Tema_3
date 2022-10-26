@@ -32,6 +32,15 @@ def imprimir_n_pasajeros(lista, n):
         if i.pasajeros >= n:
             print (i)
 
+#Naves que comiencen por n
+def imprimir_n_naves(lista, n):
+    for i in lista:
+        if i.nombre[0][1] == n:
+            print(i)
+        else:
+            print("Ninguna nave empieza por esas letras")
+            
+
 lista = []
 A = Nave("Halcón Milenario", 100, 3, 5)
 lista.append(A)
@@ -69,4 +78,11 @@ lista_tripulacion = sorted(lista, key = lambda x:x.tripulacion, reverse = True)
 #imprimir_n_elemntos(lista_tripulacion, 1)
 
 #Naves que puede llevar 6 o más pasajeros
-imprimir_n_pasajeros(lista, 6)
+#imprimir_n_pasajeros(lista, 6)
+
+#Nave más pequeña y más grandes
+print(lista_largo[0])
+print(lista_largo[-1])
+
+#Naves que comienzan por AT
+imprimir_n_naves(lista, "AT")
