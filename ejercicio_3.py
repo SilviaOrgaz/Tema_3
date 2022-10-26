@@ -9,17 +9,17 @@ class Nave ():
     def __str__(self):
         return "{}: {}, {}, {}".format(self.nombre, self.largo, self.tripulacion, self.pasajeros)
 
-    def buscar(self, lista):
-        for i in lista:
-            if lista.nombre == "Halcón Milenario":
-                print (i)
+def buscar(nombre, lista):
+    for i in lista:
+        if nombre == "":
+            print (i)
 
 def imprimir_lista(lista):
     print("Nombre, largo, tripulación, pasajeros")
     for i in lista:
         print (i)
 
-
+Nave = Nave()
 lista = []
 A = Nave("Halcón Milenario", 100, 3, 5)
 lista.append(A)
@@ -45,4 +45,4 @@ lista_largo = sorted(lista, key = lambda x:x.largo, reverse = True)
 #imprimir_lista(lista_largo)
 
 #Muestra toda la información del Halcón Milenario y de la Estrella de la Muerte
-buscar(lista)
+Nave.buscar(lista)
