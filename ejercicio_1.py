@@ -7,5 +7,5 @@ def hanoi(n):
     return contador
 
 n = int(input("Introduce el número de discos de la Torre Hanói: "))
-print("{} discos se tienen que mover {} veces.".format(n, hanoi(n)))
+print("Se necesitan {} movimientos para mover {} discos".format(hanoi(n), n))
 
