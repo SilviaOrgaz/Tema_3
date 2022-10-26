@@ -35,3 +35,7 @@ lista.append(H)
 #Listado ordenado por nombre de las naves de manera ascendente
 lista_nombre = sorted(lista, key = lambda x:x.nombre)
 imprimir_lista(lista_nombre)
+
+#Listado ordenado por largo de las naves de manera descendente
+lista_largo = sorted(lista, key = lambda x:x.largo, reverse = True)
+imprimir_lista(lista_largo)
