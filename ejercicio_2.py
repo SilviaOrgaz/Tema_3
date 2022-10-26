@@ -28,10 +28,12 @@ def determinante_grado_3(m3):
     return A1 - A2 + A3
 
 def determinante_grado_3_sarrus(m3):
-
+    return m3[0][0]*m3[1][1]*m3[2][2] + m3[1][0] * m3[2][1] *m3[0][2] + m3[2][0] * m3[1][2] * m3[0][1] - m3[0][2] * m3[1][1] *[2][0] - m3[1][2] * m3[2][1] * m3[0][0]- m3[0][1]*m3[1][0]*m3[2][2]
 
 matriz = [[1, 2, 4],[2, 3, 5],[8, 5, 9]]
-print("El determinante es:",determinante_grado_3(matriz))
+print("El determinante iterativo es:",determinante_grado_3(matriz))
+print("El determinante según Sarrus:",determinante_grado_3_sarrus(matriz))
+
 
 
 
