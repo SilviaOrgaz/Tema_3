@@ -6,12 +6,17 @@ def crear_matriz(numero_filas, numero_columnas):
         matriz[i] = [None] * numero_columnas
     return matriz
 
-matriz = crear_matriz(3, 3)
-print(matriz)
 
+#Calculo de un determinante de una matriz de grado 2
+def determinante_grado_2(m2):
+    return m2[0][0] * m2[1][1] - m2[0][1] * m2[1][0]
 
-matriz_final = crear_matriz_final(3,3)
-print(matriz_final)
+def insertar_elementos_grado_2(a, b, c , d):
+    matriz = crear_matriz(2, 2)
+    matriz[0][0] = a
+    matriz[0][1] = b
+    matriz[1][0] = c
+    matriz[1][1] = d
 
 def det(n):
     deter=1
@@ -20,6 +25,10 @@ def det(n):
     print ('\nEl determinante de la matriz es = ', deter)
 
 
+
+
+matriz = crear_matriz(3, 3)
+print(matriz)
 
 
 
