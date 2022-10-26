@@ -20,19 +20,15 @@ def insertar_elementos_grado_2(a, b, c , d):
     matriz[1][1] = d
     return matriz
 
+#Función iterativa
 def determinante_grado_3(m3):
     A1 = m3[0][0] * determinante_grado_2(insertar_elementos_grado_2(m3[1][1], m3[1][2], m3[2][1], m3[2][2]))
-    A2 = m3[0][1] * determinante_grado_2(insertar_elementos_grado_2(m3[1][1], m3[1][2], m3[2][1], m3[2][2]))
-    deter=1
-    for x in range (n):
-        deter=matriz[x][x]*deter
-    print ('\nEl determinante de la matriz es = ', deter)
+    A2 = m3[0][1] * determinante_grado_2(insertar_elementos_grado_2(m3[1][0], m3[1][2], m3[2][0], m3[2][2]))
+    A3 = m3[0][2] * determinante_grado_2(insertar_elementos_grado_2(m3[1][0], m3[1][1], m3[2][0], m3[2][1]))
+    return A1 - A2 + A3
 
-
-
-
-matriz = crear_matriz(2, 3)
-print(matriz)
+matriz = [[1, 2, 4],[2, 3, 5],[8, 5, 9]]
+print("El determinante es:",determinante_grado_3(matriz))
 
 
 
