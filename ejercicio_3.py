@@ -1,0 +1,10 @@
+class Nave ():
+
+    def __init__(self, nombre, largo, tripulacion, pasajeros):
+        self.nombre = nombre
+        self.largo = largo
+        self.tripulacion = tripulacion
+        self.pasajeros = pasajeros
+    
+    def __str__(self):
+        return "{} de {} de largo con {} de tripulacion y con capacidad para {} pasajeros".format(self.nombre, self.largo, self.tripulacion, self.pasajeros)
