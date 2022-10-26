@@ -33,12 +33,14 @@ def imprimir_n_pasajeros(lista, n):
             print (i)
 
 #Naves que comiencen por n
-def imprimir_n_naves(lista, n):
+def imprimir_n_naves(lista, n1, n2):
+    contador = 0
     for i in lista:
-        if i.nombre[0][1] == n:
+        if i.nombre[0] == n1 and i.nomre[1] == n2:
             print(i)
-        else:
-            print("Ninguna nave empieza por esas letras")
+            contador+=1
+    if contador == 0:
+        print("Ninguna nave empieza por esas letras")
             
 
 lista = []
@@ -85,4 +87,4 @@ print(lista_largo[0])
 print(lista_largo[-1])
 
 #Naves que comienzan por AT
-imprimir_n_naves(lista, "AT")
+imprimir_n_naves(lista, "A", "T")
