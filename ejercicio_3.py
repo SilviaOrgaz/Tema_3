@@ -9,16 +9,22 @@ class Nave ():
     def __str__(self):
         return "{}: {}, {}, {}".format(self.nombre, self.largo, self.tripulacion, self.pasajeros)
 
+#Imprime la lista con las naves
 def imprimir_lista(lista):
     print("Nombre, largo, tripulación, pasajeros")
     for i in lista:
         print (i)
 
+#Impreme la nave y sus características
 def imprimir(lista, nombre):
     for i in lista:
         if i.nombre == nombre:
             print (i)
 
+#Imprime los primeros cinco elementos
+def imprimir_n_elemntos(lista, longitud):
+    for i in range(longitud):
+        print(lista[i])
 
 lista = []
 A = Nave("Halcón Milenario", 100, 3, 5)
@@ -45,5 +51,9 @@ lista_largo = sorted(lista, key = lambda x:x.largo, reverse = True)
 #imprimir_lista(lista_largo)
 
 #Muestra toda la información del Halcón Milenario y de la Estrella de la Muerte
-imprimir(lista, "Halcon Milenario")
+#imprimir(lista, "Halcón Milenario")
+#imprimir(lista, "Estrella de la Muerte")
 
+#Las cinco naves con mayor cantidad de pasajeros
+lista_pasajeros = sorted(lista, key = lambda x:x.pasajeros, reverse = True)
+imprimir_n_elemntos(lista_pasajeros, 5)
