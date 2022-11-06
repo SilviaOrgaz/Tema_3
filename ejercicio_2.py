@@ -40,10 +40,10 @@ def dibujar_matriz(m3):
         print(m3[i])
 
 
-#matriz = [[1, 2, 4],[2, 3, 5],[8, 5, 9]]
-#dibujar_matriz(matriz)
-#print("El determinante iterativo es:",determinante_grado_3(matriz))
-#print("El determinante según Sarrus:",determinante_grado_3_sarrus(matriz))
+matriz = [[1, 2, 4],[2, 3, 5],[8, 5, 9]]
+dibujar_matriz(matriz)
+print("El determinante iterativo es:",determinante_grado_3(matriz))
+print("El determinante según Sarrus:",determinante_grado_3_sarrus(matriz))
 
 #Otra forma para hacer el ejercicio
 def crear_matriz_segunda(numero_filas, numero_columnas):
@@ -74,17 +74,22 @@ def calcula_determinante(matriz):
         return matriz[0][0] * matriz[1][1] - matriz[0][1] * matriz[1][0]
     acumulable = 0
     for i in range (len(matriz)):
-        determinante = matriz[0][i] * calcula_determinante(crear_adjuntos(matriz, i))
-        print(determinante)
+        if i%2 == 0:
+            signo = 1
+        else:
+            signo = -1
+        determinante = matriz[0][i] *signo * calcula_determinante(crear_adjuntos(matriz, i))
+        #print(determinante)
         acumulable +=determinante
     return acumulable
-    
+
+print("Código hecho de forma recursiva:") 
 matriz = [[1, 2, 4],[2, 3, 5],[8, 5, 9]]
 dibujar_matriz(matriz)
 adjunto = crear_adjuntos(matriz,2)
 dibujar_matriz(adjunto)
 determinante = calcula_determinante(matriz)
-print(determinante)
+print("El determinante es",determinante)
 
 
 
