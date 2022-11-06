@@ -1,4 +1,5 @@
-#He creado este ejercicio en el repositrio de ejercicio_coches
+#He creado este ejercicio en el reposiotrio de ejercicio_coches, dentro de analisis logaritmico, dentro de nodos y luego nodos 2
+#https://github.com/SilviaOrgaz/Ejercicio_coches.git
 class Nodo(object):
     info, sig = None, None
 
