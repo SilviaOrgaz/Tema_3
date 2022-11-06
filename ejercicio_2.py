@@ -1,5 +1,8 @@
 
 #Creación de una matriz como una lista de lista
+from numpy import mat
+
+
 def crear_matriz(numero_filas, numero_columnas):
     matriz = [None] * numero_filas
     for i in range(numero_filas):
@@ -62,8 +65,11 @@ def crear_adjuntos(matriz, columna_eliminar):
     rango = len(matriz) 
     matriz_final=crear_matriz_segunda(rango-1, rango-1)
     for i in range(1, rango):
+        aux = 0
         for j in range(rango):
-            matriz_final[i-1][]
+            if j != columna_eliminar:
+                matriz_final[i-1][aux] = matriz[i][j]
+                aux+=1
     return matriz_final
 
 matriz = [[1, 2, 4],[2, 3, 5],[8, 5, 9]]
