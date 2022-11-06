@@ -56,3 +56,12 @@ class Polinomio(object):
         while(actual is not None):
             print("{}X{}".format(actual.info.valor, actual.info.termino))
             actual = actual.sig
+    
+    def restar(self, polinomio2):
+        aux= Polinomio()
+        mayor= self if(self.grado>polinomio2.grado)else polinomio2
+        for i in range(0, mayor.grado+1):
+            total = self.obtener_valor(i) - polinomio2.obtener_valor(i)
+            if(total!=0):
+                aux.agregar_termino(i, total)
+        return aux
