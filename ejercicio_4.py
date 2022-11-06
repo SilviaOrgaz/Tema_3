@@ -28,3 +28,16 @@ class Polinomio(object):
                 actual = actual.sig
             aux.sig = actual.sig
             actual.sig = aux
+    
+    def eliminar_termino(self,termino):
+        aux = self.termino_mayor
+        if(self.grado == termino):
+            self.termino_mayor=aux.sig
+            del aux
+        else:
+            while(aux.sig is not None):
+                if aux.sig.info.termino == termino:
+                    aux.sig = aux.sig.sig
+                    del aux.sig
+                    return
+                aux = aux.sig
