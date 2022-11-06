@@ -50,4 +50,9 @@ class Polinomio(object):
             return aux.info.valor
         else:
             return 0
-            
+    #Pinta un polinomio
+    def imprime(self):
+        actual = self.termino_mayor
+        while(actual is not None):
+            print("{}X{}".format(actual.info.valor, actual.info.termino))
+            actual = actual.sig
