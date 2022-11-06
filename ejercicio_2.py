@@ -53,6 +53,11 @@ def crear_matriz(numero_filas, numero_columnas):
         matriz[i]= [None] * numero_columnas
     return matriz
 
+def dibujar_matriz(matriz):
+    print("La matriz es: ")
+    for i in range(len(matriz)):
+        print (matriz[i])
+
 
 
 
