@@ -70,15 +70,18 @@ def crear_adjuntos(matriz, columna_eliminar):
     return matriz_final
 
 def calcula_determinante(matriz):
+    acumulable = 0
     for i in range (len(matriz)):
         determinante = matriz[0][i] * crear_adjuntos(matriz, i) 
-        determinante +=determinante
-    return determinante 
+        acumulable +=determinante
+    return acumulable
     
 matriz = [[1, 2, 4],[2, 3, 5],[8, 5, 9]]
 dibujar_matriz(matriz)
 adjunto = crear_adjuntos(matriz,2)
 dibujar_matriz(adjunto)
+determinante = calcula_determinante(matriz)
+print(determinante)
 
 
 
