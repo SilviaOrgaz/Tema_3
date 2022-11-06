@@ -65,3 +65,16 @@ class Polinomio(object):
             if(total!=0):
                 aux.agregar_termino(i, total)
         return aux
+A = Polinomio()
+A.agregar_termino(2,4)
+A.agregar_termino(4,5)
+A.imprime()
+B = Polinomio()
+B.agregar_termino(3,3)
+B.imprime()
+C = A.restar(B)
+print("Completo")
+C.imprime()
+C.eliminar_termino(2)
+print("Eliminado")
+C.imprime()
