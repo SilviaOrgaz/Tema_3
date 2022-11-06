@@ -61,6 +61,9 @@ def dibujar_matriz_segunda(matriz):
 def crear_adjuntos(matriz, columna_eliminar):
     rango = len(matriz) 
     matriz_final=crear_matriz_segunda(rango-1, rango-1)
+    for i in range(1, rango):
+        for j in range(rango):
+            matriz_final[i-1][]
     return matriz_final
 
 matriz = [[1, 2, 4],[2, 3, 5],[8, 5, 9]]
