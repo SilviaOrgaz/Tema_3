@@ -45,6 +45,10 @@ dibujar_matriz(matriz)
 print("El determinante iterativo es:",determinante_grado_3(matriz))
 print("El determinante según Sarrus:",determinante_grado_3_sarrus(matriz))
 
+#Otra forma para hacer el ejercicio
+
+def crear_matriz(numero_filas, numero_columnas):
+
 
 
 
