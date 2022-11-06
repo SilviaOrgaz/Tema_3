@@ -42,21 +42,26 @@ def dibujar_matriz(m3):
 
 matriz = [[1, 2, 4],[2, 3, 5],[8, 5, 9]]
 dibujar_matriz(matriz)
-print("El determinante iterativo es:",determinante_grado_3(matriz))
-print("El determinante según Sarrus:",determinante_grado_3_sarrus(matriz))
+#print("El determinante iterativo es:",determinante_grado_3(matriz))
+#print("El determinante según Sarrus:",determinante_grado_3_sarrus(matriz))
 
 #Otra forma para hacer el ejercicio
-
-def crear_matriz(numero_filas, numero_columnas):
+def crear_matriz_segunda(numero_filas, numero_columnas):
     matriz = [None] * numero_filas
     for i in range (numero_filas):
         matriz[i]= [None] * numero_columnas
     return matriz
 
-def dibujar_matriz(matriz):
+def dibujar_matriz_segunda(matriz):
     print("La matriz es: ")
     for i in range(len(matriz)):
         print (matriz[i])
+
+#Función que recibe una matriz  una posición y elimina la columna de esa posición y los de la primera fila.
+def crear_adjuntos(matriz, columna_eliminar):
+    rango = len(matriz) 
+    matriz_final=crear_matriz_segunda(rango-1, rango-1)
+    return matriz_final
 
 
 
