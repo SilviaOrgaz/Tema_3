@@ -70,9 +70,12 @@ def crear_adjuntos(matriz, columna_eliminar):
     return matriz_final
 
 def calcula_determinante(matriz):
+    if len(matriz) == 2:
+        return matriz[0][0] * matriz[1][1] - matriz[0][1] * matriz[1][0]
     acumulable = 0
     for i in range (len(matriz)):
-        determinante = matriz[0][i] * crear_adjuntos(matriz, i) 
+        determinante = matriz[0][i] * calcula_determinante(crear_adjuntos(matriz, i))
+        print(determinante)
         acumulable +=determinante
     return acumulable
     
