@@ -40,8 +40,8 @@ def dibujar_matriz(m3):
         print(m3[i])
 
 
-matriz = [[1, 2, 4],[2, 3, 5],[8, 5, 9]]
-dibujar_matriz(matriz)
+#matriz = [[1, 2, 4],[2, 3, 5],[8, 5, 9]]
+#dibujar_matriz(matriz)
 #print("El determinante iterativo es:",determinante_grado_3(matriz))
 #print("El determinante según Sarrus:",determinante_grado_3_sarrus(matriz))
 
@@ -63,6 +63,10 @@ def crear_adjuntos(matriz, columna_eliminar):
     matriz_final=crear_matriz_segunda(rango-1, rango-1)
     return matriz_final
 
+matriz = [[1, 2, 4],[2, 3, 5],[8, 5, 9]]
+dibujar_matriz(matriz)
+adjunto = crear_adjuntos(matriz,1)
+dibujar_matriz(adjunto)
 
 
 
