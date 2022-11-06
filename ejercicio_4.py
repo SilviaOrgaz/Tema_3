@@ -41,3 +41,13 @@ class Polinomio(object):
                     del aux.sig
                     return
                 aux = aux.sig
+    #Obtiene el valor de un monomio
+    def obtener_valor(self, termino):
+        aux = self.termino_mayor
+        while(aux is not None and aux.info.termino > termino):
+            aux = aux.sig
+        if(aux is not None and aux.info.termino ==termino):
+            return aux.info.valor
+        else:
+            return 0
+            
